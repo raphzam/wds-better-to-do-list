@@ -3,6 +3,11 @@ const newListForm = document.querySelector("[data-new-list-form]");
 const newListInput = document.querySelector("[data-new-list-input]");
 const deleteListButton = document.querySelector("[data-delete-list-button]");
 
+const listDisplayContainer = document.querySelector('[data-list-display-container]')
+const listTitleElement = document.querySelector('[data-list-title]')
+const listCountElement = document.querySelector('[data-list-count]')
+const tasksContainer = document.querySelector('[data-tasks]')
+
 const LOCAL_STORAGE_LIST_KEY = "task.lists";
 const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = "task.selectedListId";
 let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || [];
@@ -48,6 +53,18 @@ function save() {
 
 function render() {
   clearElement(listsContainer);
+  renderLists()
+  const selectedList = lists.find(list => list.id === selectedListId)
+  if (selectedListId == null) {
+    listDisplayContainer.style.display = 'none'
+  } else {
+    listDisplayContainer.style.display = ''
+    listTitleElement.innerText = selectedList.name
+
+  }
+}
+
+function renderLists(){
   lists.forEach((list) => {
     const listElement = document.createElement("li");
     listElement.dataset.listId = list.id;
