@@ -3,6 +3,9 @@ Building a better to-do list with Web Dev Simplified and Kevin Powell
 Youtube Tutorial Part 1: https://www.youtube.com/watch?v=IhmSidOJSeE&t=0s
 Youtube Tutorial Part 2: https://www.youtube.com/watch?v=W7FaYfuwu70
 
+# how to run
+clone repository -> open index.html in browser
+
 # technologies 
 HTML, CSS, JavaScript
 
