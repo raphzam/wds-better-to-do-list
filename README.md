@@ -9,7 +9,7 @@ HTML, CSS, JavaScript
 # new concepts learned
 Git: better commit messages, branches, merging
 HTML: template tags, 
-CSS: grid, environment variables, transitions, bem naming conventions
+CSS: grid, pseudo elements, environment variables, transitions, bem naming conventions
 JavaScript: queryselectors, working with browser local storage, event listeners
 
 # takeaways
